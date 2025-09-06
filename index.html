@@ -1,47 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity: Water Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #2d2d2d;
+      background-color: #fff;
+    }
+
+    /* Hero Section */
+    /* Make the background image cover the entire screen */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+  background: url('img/SierraLeone_2023_CG-3474.jpg') center -200px/cover no-repeat;
+      z-index: -1;
+      opacity: 1;
+    }
+    .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 8px 1rem 0 1rem; /* Even less top padding to raise button */
+  margin-top: 0;
+  color: #fff;
+  position: relative;
+  background: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .donate-button {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background-color: #f8c733; /* Yellow */
+  color: #222; /* Dark text for contrast */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: none; /* Remove dark box */
+  border: none; /* Remove border */
+  transition: background 0.3s ease;
+    }
+
+    .donate-button:hover {
+  background-color: #ffe082; /* Lighter yellow on hover */
+    }
+
+    /* Footer */
+    footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: transparent; /* Transparent background */
+  font-size: 0.9rem;
+  color: #fff; /* White text */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+    }
+    /* Horizontal black bar at top of hero section */
+    .hero-bar {
+  width: 100%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Headline left, logo right */
+  padding: 24px 16px;
+  box-sizing: border-box;
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 32px;
+  opacity: 0.95;
+    }
+    .hero-logo {
+  height: 48px;
+  margin-right: 0;
+  margin-left: 24px;
+    }
+    .hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align text to the left */
+  color: #fff;
+    }
+    .hero-text h1 {
+  font-size: 2.3rem;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  color: #fff7e1;
+    }
+    .hero-text p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  color: #fff7e1;
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <!-- Top black bar with logo and text (not part of background) -->
+  <div class="hero-bar">
+    <!-- Headline and Subheadline on the left -->
+    <div class="hero-text">
+      <h1>Every drop creates a ripple of change</h1>
+      <p>100% of donations fund lasting clean water projects uplifting entire communities.</p>
+    </div>
+    <!-- Charity Water Logo on the right -->
+    <img src="img/charitywater_logo_horizontal_WhiteText.png" alt="Charity Water Logo" class="hero-logo">
+  </div>
+  <!-- Hero Section with background image only -->
+  <section class="hero">
+    <div class="hero-content">
+  <div class="donate-caption" style="font-family: 'Proxima Nova', Arial, sans-serif; color: #beccc8; font-size: 0.95rem; margin-bottom: 8px;">Give the gift of life to families in need</div>
+      <a href="#" class="donate-button">Donate Now</a>
+    </div>
+  </section>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
-
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <!-- Simple Footer -->
+  <footer>
+    © 2025 charity: water | Bringing clean water to every community
+  </footer>
 </body>
 </html>
